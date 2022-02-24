@@ -14,9 +14,9 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X");
+        
         float mouseY = Input.GetAxis("Mouse Y");
-        transform.rotation = transform.rotation * Quaternion.Euler(mouseX*rotationSpeed, -mouseY*rotationSpeed, 0);
+        transform.rotation = transform.rotation * Quaternion.Euler(0, -mouseY*rotationSpeed, 0);
 
     }
 }
