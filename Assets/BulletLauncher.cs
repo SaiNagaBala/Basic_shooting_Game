@@ -20,7 +20,7 @@ public class BulletLauncher : MonoBehaviour
         {
             GameObject tempBullet;
             tempBullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
-            tempBullet.GetComponent<Rigidbody>().velocity = Vector3.forward;
+            tempBullet.GetComponent<Rigidbody>().velocity = ( Vector3.forward * speed );
         }
     }
 }
