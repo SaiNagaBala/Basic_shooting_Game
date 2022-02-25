@@ -6,6 +6,7 @@ public class BulletLauncher : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public int speed;
+    static int score;
     
     // Start is called before the first frame update
     void Start()
@@ -24,5 +25,7 @@ public class BulletLauncher : MonoBehaviour
             Camera camera = GetComponentInChildren<Camera>();
             tempBullet.GetComponent<Rigidbody>().velocity = (Camera.main.transform.rotation * Vector3.forward * speed );
         }
+
     }
+
 }
